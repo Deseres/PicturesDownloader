@@ -1,6 +1,6 @@
 variable "subscription_id" {
   type    = string
-  default = "a799971c-6824-461c-b8e8-6a13c79e627f"
+  default = "ed0d83a3-7d5a-4c33-a5b0-5a342d235772"
 }
 
 variable "lab_name" {
@@ -10,7 +10,7 @@ variable "lab_name" {
 
 variable "album_number" {
   type    = string
-  default = "012345"
+  default = "71977"
 }
 
 variable "location" {
