@@ -74,7 +74,7 @@ stages:
               environmentServiceNameAzureRM: $(azureServiceConnection)
               backendServiceArm: $(azureServiceConnection)
               backendAzureRmResourceGroupName: LabCommon
-              backendAzureRmStorageAccountName: common012345
+              backendAzureRmStorageAccountName: common71977
               backendAzureRmContainerName: terraform
               backendAzureRmKey: lab11.tfstate
           - task: TerraformTaskV4@4
