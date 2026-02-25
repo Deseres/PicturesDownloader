@@ -7,7 +7,7 @@ pr:
 variables:
   azureServiceConnection: AzureServiceConnection
   buildConfiguration: Release
-  apiAppName: lab11api012345
+  apiAppName: lab11api71977
 
 stages:
   - stage: BuildApi
