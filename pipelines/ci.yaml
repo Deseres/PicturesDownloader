@@ -1,5 +1,7 @@
-trigger:
-  - master
+trigger: none
+
+pr:
+  -master
 
 stages:
   - stage: VerifyCode
