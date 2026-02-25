@@ -5,8 +5,8 @@ stages:
   - stage: VerifyCode
     displayName: Code verification
     jobs:
-      - job: Build
-        displayName: Build Azure Functions
+      - job: Api
+        displayName: Api build & verify
         pool:
           vmImage: windows-latest
         steps:
@@ -15,6 +15,17 @@ stages:
             inputs:
               version: '8.0.x'
           - script: dotnet build code/Api --configuration Release
-            displayName: Build Api function
+            displayName: Build Api
+          - script: dotnet test code/ApiTests --configuration Release
+            displayName: Test Api
+      - job: Downloader
+        displayName: Downloader build & verify
+        pool:
+          vmImage: windows-latest
+        steps:
+          - checkout: self
+          - task: UseDotNet@2
+            inputs:
+              version: '8.0.x'
           - script: dotnet build code/Downloader --configuration Release
-            displayName: Build Downloader function
+            displayName: Build Downloader
