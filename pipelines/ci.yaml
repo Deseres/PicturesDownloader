@@ -1,7 +1,7 @@
 trigger: none
 
 pr:
-  -master
+  - master
 
 stages:
   - stage: VerifyCode
